@@ -33,6 +33,16 @@ function createWindow(): void {
     app.dock.setIcon(iconPath);
   }
 
+  if(process.platform === "linux"){
+    const iconPath = path.resolve(__dirname, "resources", "icon.png")
+    app.dock.setIcon(iconPath);
+  }
+
+  if(process.platform === "win32"){
+    const iconPath = path.resolve(__dirname, "resources", "icon.png")
+    app.dock.setIcon(iconPath);
+  }
+
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
