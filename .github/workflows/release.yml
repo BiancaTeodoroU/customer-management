@@ -28,20 +28,30 @@ jobs:
         if: startsWith(matrix.os, 'ubuntu-latest')
         run: sudo apt autoremove
 
-      - name: Install Snapcraft
-        if: startsWith(matrix.os, 'ubuntu-latest')
-        run: sudo snap install snapcraft --classic
-
-      - name: Fix permissions
-        if: startsWith(matrix.os, 'ubuntu-latest')
-        run: chmod -R +x ./node_modules/app-builder-bin/linux/x64/
-
       - name: Install system dependencies
         if: startsWith(matrix.os, 'ubuntu-latest')
         run: sudo apt-get install -y build-essential python3 gcc g++ make libarchive-tools rpm
 
-      - name: Release Electron app
+      - name: Release Electron app for Ubuntu
+        if: startsWith(matrix.os, 'ubuntu-latest')
         uses: samuelmeuli/action-electron-builder@v1
         with:
           github_token: ${{ secrets.github_token }}
           release: true
+          args: --linux deb
+
+      - name: Release Electron app for Mac
+        if: startsWith(matrix.os, 'macos-latest')
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          release: true
+          args: --mac
+
+      - name: Release Electron app for Windows
+        if: startsWith(matrix.os, 'windows-latest')
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          release: true
+          args: --win
