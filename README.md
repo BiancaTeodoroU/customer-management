@@ -1,20 +1,24 @@
-# customer-management
+# customer-management - Gestão de Clientes  📝
 
-An Electron application with React and TypeScript
+Aplication using React, Typescript and Tailwindcss
 
-## Recommended IDE Setup
+## Sobre 📄
 
-- [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+Project with the aim of learning more about the Electron Framework, and practicing React, Typescript and Tailwindcss more
 
-## Project Setup
+Projeto no intuito de aprender mais sobre o Framework electron, e praticando mais React, Typescript e Tailwindcss
 
-### Install
+## 🧰 Pré-requisitos
+Antes de começar, você vai precisar ter instalado:
+- NodeJS >= v20.16.0
+
+## 🛠️ Instalação
 
 ```bash
-$ npm install
+$ npm i
 ```
 
-### Development
+## Comando para rodar o ambiente de desenvolvimento ⚙️
 
 ```bash
 $ npm run dev
