@@ -1,6 +1,6 @@
 {
   "name": "customer-management",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Sistema para gerenciar cliente utilizando React, typescript e tailwindcss",
   "main": "./out/main/index.js",
   "author": "example.com",
